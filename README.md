@@ -2,9 +2,12 @@
 Powershell Workshop scripts, slides and installation guide
 
 ## Windows
-- 
+#### Windows 8 and 10
+- Open powershell and type $PSVersionTable. If your powershell version is less than 3, follow Windows 7 instructions
+#### Windows 7
 
 ## MacOS
+- Open terminal and paste the following commands into your terminal.
 ~~~
 # Download the powershell '.tar.gz' archive
 curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v6.1.0/powershell-6.1.0-osx-x64.tar.gz
