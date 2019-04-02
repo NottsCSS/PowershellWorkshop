@@ -7,7 +7,7 @@ Powershell Workshop scripts, slides and installation guide
 #### Windows 7
 
 ## MacOS
-- Open terminal and paste the following commands into your terminal.
+- Open terminal and run the following commands in your terminal.
 ~~~
 # Download the powershell '.tar.gz' archive
 curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v6.1.0/powershell-6.1.0-osx-x64.tar.gz
@@ -23,4 +23,8 @@ sudo chmod +x /usr/local/microsoft/powershell/6.1.0/pwsh
 
 # Create the symbolic link that points to pwsh
 sudo ln -s /usr/local/microsoft/powershell/6.1.0/pwsh /usr/local/bin/pwsh
+~~~
+- If you are having problems with your installation, run this command in your terminal and try again
+~~~
+xcode-select --install
 ~~~
