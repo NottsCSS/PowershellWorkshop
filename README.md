@@ -3,8 +3,16 @@ Powershell Workshop scripts, slides and installation guide
 
 ## Windows
 #### Windows 8 and 10
-- Open powershell and type $PSVersionTable. If your powershell version is less than 3, follow Windows 7 instructions
+- Open powershell and type $PSVersionTable. If your PSVersion is less than 3.0, follow Windows 7 instructions
+
 #### Windows 7
+Installation guide: https://github.com/PowerShell/PowerShell
+
+1. Under 'Get Powershell', search for Windows(x64) (if 64-bit), Windows(x86) (if 32-bit), and click the .msi download link.
+2. Run the installer and follow the on-screen instructions. 
+3. Make sure 'Add to environment PATH' is ticked. 
+4. Install
+5. Run Powershell Core as admin. 
 
 ## MacOS
 - Open terminal and run the following commands in your terminal.
