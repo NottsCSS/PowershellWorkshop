@@ -1,4 +1,4 @@
-# Lesson 1 
+# Lesson 1: Syntax 
 
 ### Get-Help
 ~~~ powershell
@@ -15,7 +15,8 @@ help
 ~~~
 #### *Above and beyond*
 - Try out `Get-Help Get-Help`
-- `help` is actually not an alias, but a function name of `Get-Help | More`
+- `help` is actually not an alias, but a function for `Get-Help | More`
+- Try running `Get-Help | More`
 
 Remember to use `Get-Help` extensively to find out how to accomplish a specific task.
 
@@ -53,7 +54,7 @@ Example: `+` to append, `*` to repeat strings.
 ~~~
 
 #### 2. Comparison Operators
-`-eq` (equal) , `-ne` (not equal), `-lt` (less than), `gt` (greater than)
+`-eq` (equal) , `-ne` (not equal), `-lt` (less than), `le` (less or equal), `gt` (greater than), `ge` (greater or equal)
 
 ~~~ powershell
 $var -eq 5
@@ -65,7 +66,7 @@ $var -eq 5
 "The rain in Kuching" -replace "rain", "storm"
 # Output: The storm in Kuching
 ~~~ 
-*Above and beyond*
+#### *Above and beyond*
 - `-replace` accepts regex (regular expressions) as its first parameter
 
 #### 4. Logical Operators 
@@ -80,9 +81,13 @@ i.e: `-or`, `-not` *(or !)*, `-xor`, `-and`
 Logical operators are evaluated via *short circuit evaluation*.
 For more info, check https://en.wikipedia.org/wiki/Short-circuit_evaluation
 
+* * * 
+  
 ### Pipelining
+TODO: Kashing pls fill in
 
 ### Filters
+TODO: Kashing pls fill in
 
 ### Formatting, Sorting and Converting to readable files 
 
@@ -95,17 +100,56 @@ Format-Wide
 # Sorting cmdlets
 Sort-Object
 
-# Converting Files  
+# Converting cmdlets
 ConvertTo-Html
 ConvertTo-Csv
 ConvertTo-Xml
 ~~~
-*Note:* All conversion cmdlets only do conversion, their output are not saved. Pipe the command to `Out-File` with the first paramater as the name of the file
+*Note:* All conversion cmdlets only do **conversion**, their output are **not saved**. Pipe the command to `Out-File` with the first paramater as the name of the file.
 
 *Example:*
 ~~~ powershell
 Get-Process firefox | ConvertTo-Html | Out-File .\'Firefox Processes.html'
 ~~~
 
+* * *
 
+### PSDrives and PSProviders 
 
+PSProviders are how Powershell adapts data while PSDrives makes it accessible.
+To get all PSDrives:
+~~~ powershell
+Get-PSDrive
+~~~
+
+Commands related to `PSDrive` involve the noun `Item`. 
+
+#### Item manipulation cmdlets
+~~~ powershell
+Get-ChildItem # get all items 
+New-Item # Limited (mainly directory and files), read the help files for more info  
+Set-ItemProperty 
+Copy-Item
+Rename-Item
+~~~ 
+
+#### Creating a new item
+~~~ powershell
+# Creating a new folder 
+New-Item -ItemType Directory -Path .\FolderName
+
+# Creating a new file 
+New-Item -ItemType File -Path .\file_name.txt
+~~~
+
+#### Renaming an item 
+~~~ powershell
+Rename-Item -Path OriginalFileName -NewName NewName 
+~~~
+
+#### Setting an item to hidden 
+~~~ powershell
+Set-ItemProperty -Path filename -Attributes -Value "Hidden"
+~~~
+
+* * *

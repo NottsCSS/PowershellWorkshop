@@ -1,1 +1,1 @@
-# Lesson 2
+# Lesson 2: Scripting and Automation
