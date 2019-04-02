@@ -28,6 +28,14 @@ Get-Process # gets all running processes
 Get-Command command # another cmdlet to find commands, can be used with wildcards
 ~~~
 
+### Common Verbs used as cmdlets
+- `Get-`
+- `Set-`
+- `New-`
+- `Invoke-`
+- `Out-`
+- `Import-`
+
 ### Aliases 
 ~~~ powershell
 Get-Alias # gets all aliases currenly in the session 
@@ -67,7 +75,7 @@ $var -eq 5
 # Output: The storm in Kuching
 ~~~ 
 #### *Above and beyond*
-- `-replace` accepts regex (regular expressions) as its first parameter
+- `-replace` accepts *regex* (regular expressions) as its first parameter
 
 #### 4. Logical Operators 
 You can use logical operators to connect statements together to form a logical expression.
@@ -109,14 +117,14 @@ ConvertTo-Xml
 
 *Example:*
 ~~~ powershell
-Get-Process firefox | ConvertTo-Html | Out-File .\'Firefox Processes.html'
+Get-Process firefox | Format-Table -Autosize | ConvertTo-Html | Out-File .\'Firefox Processes.html'
 ~~~
 
 * * *
 
 ### PSDrives and PSProviders 
 
-PSProviders are how Powershell adapts data while PSDrives makes it accessible.
+`PSProviders` are how Powershell adapts data while `PSDrive` makes it accessible.
 To get all PSDrives:
 ~~~ powershell
 Get-PSDrive
@@ -151,5 +159,3 @@ Rename-Item -Path OriginalFileName -NewName NewName
 ~~~ powershell
 Set-ItemProperty -Path filename -Attributes -Value "Hidden"
 ~~~
-
-* * *
