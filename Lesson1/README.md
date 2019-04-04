@@ -125,6 +125,7 @@ Select-String -Path C:\DataFiles\*.txt  -Pattern ‘error output’
 ~~~
 looks at all .txt files in the DataFiles directory for the pattern 'error output'.
 
+* * *
 
 ### Formatting, Sorting and Converting to readable files 
 
