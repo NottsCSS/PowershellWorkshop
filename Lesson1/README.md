@@ -92,10 +92,32 @@ For more info, check https://en.wikipedia.org/wiki/Short-circuit_evaluation
 * * * 
   
 ### Pipelining
-TODO: Kashing pls fill in
+Objects are passed from one cmdlet to another
+~~~
+* (Get-Process | Sort-Object -desc CPU)[0]
+~~~
+$_ is a placeholder for the pipelined object, look at filters for more info
 
 ### Filters
-TODO: Kashing pls fill in
+
+#### Where-Object
+Used to filter out objects based on criteria
+~~~
+Get-Command -CommandType cmdlet | `
+	Where-Object {$_.Name -like ‘*clear*’}
+~~~
+
+#### Select-Object
+Select only specific members from objects
+~~~
+Get-Process | Select-Object Name
+~~~
+
+#### Select-String
+Used to search for a specific string pattern from files
+~~~
+Select-String -Path C:\DataFiles\*.txt  -Pattern ‘error output’
+~~~
 
 ### Formatting, Sorting and Converting to readable files 
 
