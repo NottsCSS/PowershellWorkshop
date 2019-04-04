@@ -101,6 +101,7 @@ gets the first object from Get-Process after sorting them.
 
 ### Filters
 
+
 #### Where-Object
 Used to filter out objects based on criteria. Example:
 ~~~ powershell
@@ -109,6 +110,7 @@ Get-Command -CommandType cmdlet | `
 ~~~
 will only select objects that names contain clear.
 
+
 #### Select-Object
 Select only specific members from objects. Example:
 ~~~ powershell
@@ -116,12 +118,14 @@ Get-Process | Select-Object Name
 ~~~
 will only extract the Name from the Get-Process cmdlet
 
+
 #### Select-String
 Used to search for a specific string pattern from files. Example:
 ~~~ powershell
 Select-String -Path C:\DataFiles\*.txt  -Pattern ‘error output’
 ~~~
 looks at all .txt files in the DataFiles directory for the pattern 'error output'.
+
 
 ### Formatting, Sorting and Converting to readable files 
 
