@@ -101,7 +101,6 @@ gets the first object from Get-Process after sorting them.
 
 ### Filters
 
-
 #### Where-Object
 Used to filter out objects based on criteria. Example:
 ~~~ powershell
