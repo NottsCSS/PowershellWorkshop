@@ -1,3 +1,6 @@
+# Slides
+https://docs.google.com/presentation/d/19A09AGKRqSgnneysq4NTXiyDnD9nRMaPUwaR-Lyu0Wg/edit?usp=sharing
+
 # Lesson 2: Scripting and Automation
 
 #### .ps1 files

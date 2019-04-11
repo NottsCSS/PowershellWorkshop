@@ -1,3 +1,6 @@
+# Slides
+https://docs.google.com/presentation/d/1OYV-wPSuxQvTPhwU7etWQMHyBJWjvhwwK9agykg6Zrk/edit?usp=sharing
+
 # Lesson 1: Syntax 
 
 ### Get-Help
